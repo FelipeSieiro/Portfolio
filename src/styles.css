@@ -34,4 +34,27 @@ body{
 span{
    @apply text-pf-primary-600 font-bold;
 }
+h1{
+   @apply text-pf-secondary-200 font-pf-primary font-bold;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li,
+blockquote,
+label,
+small,
+strong,
+em,
+b,
+i,
+u {
+   @apply text-pf-secondary-100 font-pf-primary;
+}
+
 

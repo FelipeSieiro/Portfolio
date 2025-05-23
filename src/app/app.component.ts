@@ -2,6 +2,7 @@ import { Component} from '@angular/core';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
+import { AboutComponent } from './pages/about/about.component';
 
 
 @Component({
@@ -9,6 +10,7 @@ import { HomeComponent } from './pages/home/home.component';
   imports: [
     HeaderComponent,
     HomeComponent,
+    AboutComponent,
     FooterComponent 
   ],
   templateUrl: './app.component.html',
