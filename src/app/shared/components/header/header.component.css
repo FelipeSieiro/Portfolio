@@ -1,0 +1,11 @@
+@import '../../../../styles.css';
+
+.header__navbar {
+  @apply max-w-[1200px] mx-auto px-[20px] flex items-center justify-between;
+}
+
+.nav-link {
+  @apply relative text-pf-secondary-100 font-medium transition hover:text-pf-primary-100
+    after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0
+    hover:after:w-full after:h-[2px] after:bg-pf-primary-500 after:transition-all after:duration-300;
+}
