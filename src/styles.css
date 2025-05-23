@@ -29,6 +29,9 @@
 
 html,
 body{
-   @apply font-pf-primary bg-pf-secondary-700 w-full h-full; 
+   @apply font-pf-primary bg-pf-secondary-700 w-full min-h-screen ; 
+}
+span{
+   @apply text-pf-primary-600 font-bold;
 }
 
