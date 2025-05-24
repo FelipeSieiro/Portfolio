@@ -14,22 +14,22 @@ export class ExperienceComponent {
   constructor() {
     this.events = [
       {
-        "status": "WEB Architecture JR – F1RST Digital Services",
-        "date": "11/2024 – Presente",
-        "color": "#008a90",
-        "description": "Suporte e definição de arquiteturas Angular, boas práticas em desenvolvimento web e evolução de aplicações internas. Criação da arquitetura de referência para i18n no Santander Brasil."
+        cargo: 'WEB Architecture I',
+        empresa: 'F1RST Digital Services',
+        data: '11/2024 – Presente',
+        color: '#008a90'
       },
       {
-        "status": "Estagiário WEB Architecture – F1RST Digital Services",
-        "date": "10/2023 – 11/2024",
-        "color": "#008a90",
-        "description": "Documentação de arquitetura Front-End, suporte técnico Angular, melhoria de portais internos, testes unitários e E2E. Atuação com Scrum e Kanban."
+        cargo: 'Estagiário WEB Architecture',
+        empresa: 'F1RST Digital Services',
+        data: '10/2023 – 11/2024',
+        color: '#00ADB5'
       },
       {
-        "status": "Jovem Aprendiz – TECBAN Serviços Integrados",
-        "date": "05/2023 – 10/2023",
-        "color": "#008a90",
-        "description": "Atuação em rotinas administrativas, desenvolvendo habilidades de organização, comunicação e trabalho em equipe."
+        cargo: 'Jovem Aprendiz',
+        empresa: 'TECBAN Serviços Integrados',
+        data: '05/2023 – 10/2023',
+        color: '#393E46'
       }
     ];
   }

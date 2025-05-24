@@ -35,14 +35,11 @@ span{
    @apply text-pf-primary-600 font-bold;
 }
 h1{
-   @apply text-pf-secondary-200 font-pf-primary font-bold;
+   @apply font-pf-primary font-bold text-3xl;
 }
-
-h2,
-h3,
-h4,
-h5,
-h6,
+h2{
+   @apply font-pf-primary font-bold text-2xl;
+}
 p,
 a,
 li,
@@ -54,7 +51,7 @@ em,
 b,
 i,
 u {
-   @apply text-pf-secondary-100 font-pf-primary;
+   @apply  font-pf-primary text-base;
 }
 
 

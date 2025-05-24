@@ -1,0 +1,10 @@
+@import '../../../styles.css';
+
+.tag__skill_front{
+    @apply flex items-center gap-2 px-4 py-2 bg-pf-primary-200 text-pf-primary-900 rounded-xl text-base font-semibold;
+
+}
+.tag__skill_back{
+    @apply flex items-center gap-2 px-4 py-2 bg-pf-secondary-500 text-pf-primary-100 rounded-xl text-base font-semibold;
+}
+

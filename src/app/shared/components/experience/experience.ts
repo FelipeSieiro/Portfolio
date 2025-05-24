@@ -1,7 +1,6 @@
 export interface Experience {
-    status: string;
-    date: string;
+    cargo: string;
+    empresa: string;
+    data: string;
     color: string;
-    image?: string;
-    description?: string;
 }
