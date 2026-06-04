@@ -1,18 +1,25 @@
 import { Component } from '@angular/core';
 import { Training } from './training';
 import { Timeline } from 'primeng/timeline';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-training',
-  imports: [Timeline],
+  imports: [Timeline, CommonModule],
   templateUrl: './training.component.html',
-  styleUrl: './training.component.css'
+  styleUrls: ['./training.component.css']
 })
 export class TrainingComponent {
   events: Training[];
-  
+
     constructor() {
       this.events = [
+       {
+          curso: 'AWS Cloud Fundation',
+          faculdade: 'Amazon web Services',
+          data: 'out/2024',
+          color: '#393E46'
+        },
        {
           curso: 'Análise e Desenvolvimento de Sistemas',
           faculdade: 'FIAP',

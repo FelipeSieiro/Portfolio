@@ -1,13 +1,35 @@
-<div class="card">
-  <p-timeline [value]="events" align="alternate" styleClass="customized-timeline">
-    <ng-template #marker let-event>
-      <span class="flex w-8 h-8 items-center justify-center text-white rounded-full z-10 shadow-sm" [style.backgroundColor]="event.color">
-      </span>
-    </ng-template>
-    <ng-template #content let-event>
-        <h3 class="text-xl font-medium text-pf-primary-100 ">{{ event.curso }}</h3>
-        <p class="text-sm text-pf-primary-3 ">{{ event.faculdade }}</p>
-        <span class="text-sm ">{{ event.data }}</span>
-    </ng-template>
-  </p-timeline>
+<div class="education-section">
+
+  <div class="education-timeline">
+
+    <div
+      class="education-item"
+      *ngFor="let event of events"
+    >
+
+      <div class="education-marker">
+        <span [style.background]="event.color"></span>
+      </div>
+
+      <div class="education-card">
+
+        <div class="education-header">
+
+          <div>
+            <h3>{{ event.curso }}</h3>
+            <p>{{ event.faculdade }}</p>
+          </div>
+
+          <span class="education-date">
+            {{ event.data }}
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </div>

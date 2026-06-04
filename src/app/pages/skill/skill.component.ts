@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
   selector: 'app-skill',
   imports: [ExperienceComponent, TrainingComponent, CommonModule],
   templateUrl: './skill.component.html',
-  styleUrl: './skill.component.css'
+  styleUrls: ['./skill.component.css']
 })
 export class SkillComponent {
   options = [
@@ -15,5 +15,5 @@ export class SkillComponent {
     { label: 'Estudos/Certificações', value: 'estudo' }
   ];
 
-  selected = 'trabalho'; 
+  selected = 'trabalho';
 }

@@ -5,14 +5,14 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-about',
   imports: [],
   templateUrl: './about.component.html',
-  styleUrl: './about.component.css'
+  styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
   idade!: number;
   tempo!: number;
 
   ngOnInit(): void {
-    const nascimento = new Date(2005, 3, 8); 
+    const nascimento = new Date(2005, 3, 8);
     const hoje = new Date();
     this.idade = hoje.getFullYear() - nascimento.getFullYear();
     const aniversarioEsteAno = new Date(hoje.getFullYear(), 3, 8);

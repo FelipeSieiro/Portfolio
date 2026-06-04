@@ -1,13 +1,32 @@
-<div class="card">
-  <p-timeline [value]="events" align="alternate" styleClass="customized-timeline">
-    <ng-template #marker let-event>
-      <span class="flex w-8 h-8 items-center justify-center text-white rounded-full z-10 shadow-sm" [style.backgroundColor]="event.color">
-      </span>
-    </ng-template>
-    <ng-template #content let-event>
-        <h3 class="text-xl font-medium text-pf-primary-100 ">{{ event.cargo }}</h3>
-        <p class="text-sm text-pf-primary-3 ">{{ event.empresa }}</p>
-        <span class="text-sm ">{{ event.data }}</span>
-    </ng-template>
-  </p-timeline>
+<div class="experience-section">
+  <div class="timeline">
+
+    <div class="timeline-item" *ngFor="let event of events">
+
+      <div class="timeline-marker">
+        <span [style.background]="event.color"></span>
+      </div>
+
+      <div class="timeline-card">
+        <div class="timeline-header">
+          <div>
+            <h3>{{ event.cargo }}</h3>
+            <p>{{ event.empresa }}</p>
+          </div>
+
+          <span class="timeline-date">
+            {{ event.data }}
+          </span>
+        </div>
+
+        <ul>
+          <li *ngFor="let item of event.topicos">
+            {{ item }}
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
 </div>

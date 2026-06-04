@@ -13,10 +13,10 @@ import { SkillComponent } from './pages/skill/skill.component';
     HomeComponent,
     AboutComponent,
     SkillComponent,
-    FooterComponent 
+    FooterComponent
   ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
 }

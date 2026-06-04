@@ -3,4 +3,5 @@ export interface Experience {
     empresa: string;
     data: string;
     color: string;
+    topicos?: string[];
 }
