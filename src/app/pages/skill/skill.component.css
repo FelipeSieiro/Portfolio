@@ -1,12 +1,11 @@
 @import '../../../styles.css';
 
 .skills-page {
-  @apply w-full flex flex-col gap-12;
+  @apply w-full flex flex-col gap-8;
 
   padding: clamp(1.5rem, 3vw, 3rem);
 
   max-width: 1800px;
-  margin: 0 auto;
 }
 
 .skills-card,
@@ -104,27 +103,32 @@
 }
 
 .skills-stats {
-  display: grid;
+  display: flex;
 
-  grid-template-columns:
-    repeat(3, minmax(180px, 1fr));
+  flex-wrap: wrap;
 
-  gap: 1rem;
+  justify-content: center;
+
+  gap: 0.5rem;
 
   max-width: 700px;
 
-  margin: 3rem auto 0;
+  margin: 1.5rem auto 0;
 }
 
 .stat-card {
   @apply bg-white/5
   border border-white/10
-  rounded-3xl
-  py-6 px-6;
+  rounded-2xl
+  py-4 px-4;
 
   backdrop-filter: blur(10px);
 
   transition: .3s;
+
+  flex: 1 1 calc(33.333% - 0.5rem);
+
+  min-width: 100px;
 }
 
 .stat-card:hover {
@@ -148,11 +152,11 @@
   display: grid;
 
   grid-template-columns:
-    repeat(auto-fit, minmax(500px, 1fr));
+    repeat(auto-fit, minmax(350px, 1fr));
 
-  gap: 2rem;
+  gap: 1.5rem;
 
-  margin-top: 4rem;
+  margin-top: 2rem;
 
   position: relative;
   z-index: 10;
@@ -161,7 +165,7 @@
 .skills-panel {
   @apply relative
   rounded-[2rem]
-  p-8;
+  p-4 md:p-8;
 
   background:
     rgba(255,255,255,.04);
@@ -204,7 +208,7 @@
 }
 
 .skills-panel-header h2 {
-  @apply text-3xl font-bold text-white;
+  @apply text-2xl md:text-3xl font-bold text-white;
 }
 
 .skills-panel-header p {
@@ -217,20 +221,32 @@
   display: grid;
 
   grid-template-columns:
-    repeat(auto-fit, minmax(140px, 1fr));
+    repeat(auto-fit, minmax(110px, 1fr));
 
   gap: 1rem;
+
+  width: 100%;
 }
+
 
 .tag__skill_front,
 .tag__skill_back {
   @apply flex
   flex-col
   items-center
-  justify-center
-  gap-3
-  p-5
-  rounded-3xl;
+  justify-center;
+
+  gap: .5rem;
+
+  width: 100%;
+
+  min-height: 110px;
+
+  aspect-ratio: 1;
+
+  padding: 1rem;
+
+  border-radius: 1rem;
 
   background:
     rgba(255,255,255,.04);
@@ -240,8 +256,6 @@
 
   transition:
     all .3s ease;
-
-  min-height: 140px;
 }
 
 .tag__skill_front:hover,
@@ -259,14 +273,15 @@
 
 .tag__skill_front img,
 .tag__skill_back img {
-  width: 56px;
-  height: 56px;
+  width: 32px;
+  height: 32px;
   object-fit: contain;
+  object-position: center;
 }
 
 .tag__skill_front span,
 .tag__skill_back span {
-  @apply text-white font-medium text-center;
+  @apply text-white font-medium text-center text-[0.65rem];
 }
 
 .experience-header {
@@ -344,7 +359,10 @@
   z-index: 10;
 }
 
-@media (max-width: 768px) {
+
+/* MOBILE */
+
+@media (max-width: 767px) {
 
   .skills-page {
     padding: 1rem;
@@ -354,13 +372,29 @@
     grid-template-columns: 1fr;
   }
 
-  .skills-stats {
-    grid-template-columns: 1fr;
+  .skills-grid-items {
+    grid-template-columns: repeat(2, 1fr);
+    gap: .75rem;
+  }
+
+  .tag__skill_front,
+  .tag__skill_back {
+    min-height: 100px;
+  }
+
+  .tag__skill_front img,
+  .tag__skill_back img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .tag__skill_front span,
+  .tag__skill_back span {
+    font-size: .7rem;
   }
 
   .experience-tabs {
     width: 100%;
-
     display: flex;
   }
 
@@ -368,3 +402,71 @@
     flex: 1;
   }
 }
+
+/* TABLET */
+
+@media (min-width: 768px) and (max-width: 1199px) {
+
+  .skills-stats {
+    gap: .75rem;
+    margin: 2rem auto 0;
+  }
+
+  .stat-card {
+    @apply py-5 px-5 rounded-2xl;
+  }
+
+  .skills-grid-items {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .tag__skill_front,
+  .tag__skill_back {
+    min-height: 120px;
+  }
+
+  .tag__skill_front img,
+  .tag__skill_back img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .tag__skill_front span,
+  .tag__skill_back span {
+    font-size: .8rem;
+  }
+}
+
+/* DESKTOP */
+
+@media (min-width: 1200px) {
+
+  .skills-stats {
+    gap: 1rem;
+    margin: 2.5rem auto 0;
+  }
+
+  .skills-grid-items {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+  }
+
+  .tag__skill_front,
+  .tag__skill_back {
+    min-height: 120px;
+  }
+
+  .tag__skill_front img,
+  .tag__skill_back img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .tag__skill_front span,
+  .tag__skill_back span {
+    font-size: .85rem;
+  }
+}
+
+

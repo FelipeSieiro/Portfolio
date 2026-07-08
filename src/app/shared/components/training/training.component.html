@@ -1,35 +1,103 @@
 <div class="education-section">
 
-  <div class="education-timeline">
+  <!-- FACULDADE -->
+  <div class="education-container">
+    <div class="education-section-title">
+      <h2>Formação Acadêmica</h2>
+      <p>Educação formal e certificações</p>
+    </div>
 
-    <div
-      class="education-item"
-      *ngFor="let event of events"
-    >
+    <div class="education-timeline">
 
-      <div class="education-marker">
-        <span [style.background]="event.color"></span>
-      </div>
+      <div
+        class="education-item"
+        *ngFor="let event of faculdades"
+      >
 
-      <div class="education-card">
+        <div class="education-marker">
+          <span [style.background]="event.color"></span>
+        </div>
 
-        <div class="education-header">
+        <div class="education-card">
 
-          <div>
-            <h3>{{ event.curso }}</h3>
-            <p>{{ event.faculdade }}</p>
+          <div class="education-header">
+
+            <div>
+              <div class="education-label">
+                <h3>{{ event.curso }}</h3>
+              </div>
+              <p>{{ event.faculdade }}</p>
+            </div>
+
           </div>
 
-          <span class="education-date">
-            {{ event.data }}
-          </span>
+          <a
+            *ngIf="event.certificado"
+            [href]="event.certificado"
+            target="_blank"
+            class="education-certificate-link">
+            Ver Certificado
+          </a>
 
         </div>
+
+        <span class="education-date">
+          {{ event.data }}
+        </span>
 
       </div>
 
     </div>
+  </div>
 
+  <!-- CURSOS -->
+  <div class="education-container">
+    <div class="education-section-title">
+      <h2>Cursos e Capacitações</h2>
+      <p>Aprendizado contínuo e desenvolvimento profissional</p>
+    </div>
+
+    <div class="education-timeline">
+
+      <div
+        class="education-item"
+        *ngFor="let event of cursos"
+      >
+
+        <div class="education-marker">
+          <span [style.background]="event.color"></span>
+        </div>
+
+        <div class="education-card">
+
+          <div class="education-header">
+
+            <div>
+              <div class="education-label">
+                <h3>{{ event.curso }}</h3>
+              </div>
+              <p>{{ event.faculdade }}</p>
+            </div>
+
+          </div>
+
+          <a
+            *ngIf="event.certificado"
+            [href]="event.certificado"
+            target="_blank"
+            class="education-certificate-link">
+            Ver Certificado
+          </a>
+
+        </div>
+
+        <span class="education-date">
+          {{ event.data }}
+        </span>
+
+      </div>
+
+    </div>
   </div>
 
 </div>

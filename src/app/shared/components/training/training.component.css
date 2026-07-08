@@ -2,6 +2,26 @@
 
 .education-section {
   @apply w-full max-w-6xl mx-auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.education-section-title h2 {
+  color: #fff;
+
+  font-size: 1.75rem;
+  font-weight: 800;
+
+  letter-spacing: -0.02em;
+}
+
+.education-section-title p {
+  color: rgb(148, 163, 184);
+
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 .education-timeline {
@@ -39,6 +59,9 @@
   flex-shrink: 0;
   z-index: 2;
 
+  flex: 0 0 64px;
+  width: 64px;
+
   span {
     width: 48px;
     height: 48px;
@@ -58,6 +81,8 @@
 .education-card {
   flex: 1;
 
+  position: relative;
+
   background: rgba(255,255,255,.03);
 
   border: 1px solid rgba(255,255,255,.08);
@@ -69,6 +94,8 @@
   padding: 1.75rem 2rem;
 
   transition: all .3s ease;
+
+  min-width: 0;
 }
 
 .education-card:hover {
@@ -79,6 +106,25 @@
   box-shadow:
     0 15px 40px rgba(0,0,0,.18),
     0 0 30px rgba(0,173,181,.08);
+}
+
+.education-certificate-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background: rgba(0, 173, 181, 0.15);
+  border: 1px solid rgba(0, 173, 181, 0.4);
+  color: #5eead4;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  margin-top: 1rem;
+  cursor: pointer;
+  width: fit-content;
 }
 
 .education-header {
@@ -123,8 +169,18 @@
 
 @media (max-width: 768px) {
 
+  .education-section {
+    gap: 3rem;
+  }
+
   .education-timeline::before {
     left: 19px;
+  }
+
+
+  .education-marker {
+    flex: 0 0 48px;
+    width: 48px;
   }
 
   .education-marker span {
@@ -137,7 +193,83 @@
     align-items: flex-start;
   }
 
-  .education-card {
-    padding: 1.5rem;
+  .education-header > div {
+    width: 100%;
   }
+
+  .education-date {
+    margin-top: 0.4rem;
+    align-self: flex-start;
+  }
+
+  .education-card {
+    padding: 1rem;
+    width: 100%;
+    flex: 1 1 auto;
+    box-sizing: border-box;
+    min-width: 0;
+    border-radius: 16px;
+  }
+
+  .education-certificate-link {
+    position: static;
+    margin-top: 1rem;
+    left: auto;
+    top: auto;
+    width: 100%;
+  }
+
+  .education-timeline {
+    gap: 1rem;
+  }
+
+  .education-item {
+    gap: .75rem;
+    flex-direction: column;
+  }
+
+  .education-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .education-header p {
+    font-size: .9rem;
+  }
+
+  .education-section-title h2 {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 769px) {
+  .education-item {
+    align-items: flex-start;
+  }
+
+  .education-date {
+    margin-left: 1rem;
+    white-space: nowrap;
+    align-self: flex-start;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .education-card {
+    width: 900px;
+    flex: 0 0 900px;
+  }
+}
+.education-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+
+.education-certificate-link:hover {
+  background: rgba(0, 173, 181, 0.25);
+  border-color: rgba(0, 173, 181, 0.6);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 173, 181, 0.2);
 }

@@ -3,5 +3,7 @@ export interface Training {
     faculdade: string;
     data: string;
     color: string;
+    tipo: 'faculdade' | 'curso';
+    certificado?: string;
 }
 

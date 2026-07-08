@@ -11,6 +11,8 @@ import { CommonModule } from '@angular/common';
 })
 export class TrainingComponent {
   events: Training[];
+  faculdades: Training[];
+  cursos: Training[];
 
     constructor() {
       this.events = [
@@ -18,38 +20,52 @@ export class TrainingComponent {
           curso: 'AWS Cloud Fundation',
           faculdade: 'Amazon web Services',
           data: 'out/2024',
-          color: '#393E46'
+          color: '#393E46',
+          tipo: 'curso',
+          certificado: 'https://www.credly.com/badges/your-badge-id'
         },
        {
           curso: 'Análise e Desenvolvimento de Sistemas',
           faculdade: 'FIAP',
           data: 'Fev/2023 – Dez/2024',
-          color: '#008a90'
+          color: '#008a90',
+          tipo: 'faculdade'
         },
         {
           curso: 'Liderança e desenvolvimento de competências',
           faculdade: 'FIAP',
           data: '80h – Julho de 2024',
-          color: '#222831'
+          color: '#222831',
+          tipo: 'curso',
+          certificado: 'https://fiap.com.br/certificado/sua-url'
         },
         {
           curso: 'A partir do zero: HTML e CSS para projetos web',
           faculdade: 'Alura',
           data: '53h – Maio de 2024',
-          color: '#393E46'
+          color: '#393E46',
+          tipo: 'curso',
+          certificado: 'https://alura.com.br/certificado/sua-url'
         },
         {
           curso: 'Professional Qualification Certificate in Web 2.0 Developer and Designer',
           faculdade: 'FIAP',
           data: 'Dezembro de 2023',
-          color: '#00ADB5'
+          color: '#00ADB5',
+          tipo: 'curso',
+          certificado: 'https://fiap.com.br/certificado/sua-url'
         },
         {
           curso: 'Professional Qualification Certificate in System Analysis and Web Prototyping',
           faculdade: 'FIAP',
           data: 'Julho de 2023',
-          color: '#008a90'
+          color: '#008a90',
+          tipo: 'curso',
+          certificado: 'https://fiap.com.br/certificado/sua-url'
         },
       ];
+
+      this.faculdades = this.events.filter(event => event.tipo === 'faculdade');
+      this.cursos = this.events.filter(event => event.tipo === 'curso');
     }
 }
